@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from './axios';
 
 export const createCar = async (params) => {
   return await axios.post('/car', params);
@@ -12,6 +12,6 @@ export const updateCar = async (params) => {
   return await axios.put('/car', params);
 };
 
-export const deleteCar = async (params) => {
-  return await axios.delete('/car', params);
+export const deleteCar = async (carId) => {
+  return await axios.delete(`/car/${carId}`);
 };

@@ -1,9 +1,17 @@
-import { createAction } from 'redux-actions';
-import * as ActionTypes from 'utils/action-types';
-import * as API from 'services/records';
+import axios from './axios';
 
-export const setRecords = createAction(ActionTypes.SET_RECORDS, payload => payload);
+export const createRecord = async (params) => {
+  return await axios.post('/record', params);
+};
 
-export const readRecords = () => (dispatch) => {
-  API.readRecords().then(data => dispatch(setRecords(data)));
+export const readRecords = async () => {
+  return await axios.get('/record');
+};
+
+export const updateRecord = async (params) => {
+  return await axios.put('/record', params);
+};
+
+export const deleteRecord = async (recordId) => {
+  return await axios.delete(`/record/${recordId}`);
 };

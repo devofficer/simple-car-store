@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import mainStateReducer from './main-state';
+import carStateReducer from './car-state';
+import recordStateReducer from './record-state';
+import auxiliaryStateReducer from './auxiliary-state';
 
 const reducers = combineReducers({
-  main: mainStateReducer,
+  car: carStateReducer,
+  record: recordStateReducer,
+  auxiliary: auxiliaryStateReducer,
 });
 
 export default reducers;

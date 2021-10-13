@@ -1,0 +1,10 @@
+.button {
+  margin-right: 8px;
+}
+
+#inventory-table {
+  width: 500px;
+  table-layout: fixed;
+  margin-bottom: 24px;
+  text-align: center;
+}
